@@ -21,4 +21,4 @@ import { routes } from './books.routing';
     RouterModule.forChild(routes)
   ]
 })
-export class BooksModule {}
+export default class BooksModule {}

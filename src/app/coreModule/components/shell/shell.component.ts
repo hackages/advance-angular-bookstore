@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './shell.component.html'
 })
 export class ShellComponent {
-  title = 'MegaStore by Nalys (we are taking down Amazon.com)';
+  title = 'Amazon.com';
 }

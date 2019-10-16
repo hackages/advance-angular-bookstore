@@ -12,7 +12,10 @@ export const routes: Routes = [
   },
   {
     path: 'books',
-    loadChildren: 'src/app/booksModule/books.module#BooksModule'
+    loadChildren: 'src/app/booksModule/books.module',
+    data: {
+      preload: true
+    }
   },
   {
     path: '',
