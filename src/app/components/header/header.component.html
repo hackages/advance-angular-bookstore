@@ -1,0 +1,12 @@
+<!--Header component-->
+<header>
+  <h1>{{ title }}</h1>
+  <div class="userinfo" *ngIf="username">
+    <span>{{ username }}</span>
+    <button (click)="logout()">Logout</button>
+  </div>
+</header>
+<hr />
+<br />
+
+<!--End Header component-->

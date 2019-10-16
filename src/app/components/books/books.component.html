@@ -1,0 +1,14 @@
+<h3>We have {{ items?.length || 0 }} book(s) in our library</h3>
+<hr />
+<br />
+
+<!--Books container-->
+<div class="container">
+  <!-- <a href="/books/{{ book.id }}" class="item" *ngFor="let book of items"> -->
+  <a [routerLink]="['/books', item.id]" class="item" *ngFor="let item of items">
+    <div class="module hero">
+      <h4>{{ item.title }}</h4>
+    </div>
+  </a>
+</div>
+<!--End Books container-->

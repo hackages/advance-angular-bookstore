@@ -1,0 +1,46 @@
+<form [formGroup]="form" (submit)="login()">
+  <h2>Login To Browse our shop!</h2>
+  <div class="control">
+    <div>
+      <label>Login: </label>
+    </div>
+    <input formControlName="login" placeholder="your login..." />
+    <div class="errors">
+      <span
+        *ngIf="form.get('login').touched && form.get('login').errors?.required"
+      >
+        Login is required!
+      </span>
+      <span *ngIf="form.get('login').errors?.email">
+        Login should be a valid email address
+      </span>
+    </div>
+  </div>
+  <div class="control">
+    <div>
+      <label>Password: </label>
+    </div>
+    <input
+      formControlName="password"
+      type="password"
+      placeholder="your password..."
+    />
+    <div class="errors">
+      <span
+        *ngIf="
+          form.get('password').touched && form.get('password').errors?.required
+        "
+      >
+        Password is required!
+      </span>
+      <span *ngIf="form.get('password').errors?.minlength">
+        Password should be at least 8 characters
+      </span>
+    </div>
+  </div>
+
+  <button [disabled]="form.invalid" type="submit">Save</button>
+  <button [disabled]="form.pristine" type="button" (click)="this.form.reset()">
+    Reset
+  </button>
+</form>
